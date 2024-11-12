@@ -1,0 +1,24 @@
+Convolution Neural Nets are based on a convolution, a math function that is f *0 g,
+  which tells us about the intersection between the two functions as one, g, is moved from -inf to +inf.
+  This is how CNN's work, you are essentially moving some kernel (filter, some functions, given as a matrix), over the starting field (another matrix)
+  and keeping the parts of the field that correlate with the filter
+This is how you can recognize images etc...
+
+PDF's are counting the number of atoms in a radius(another word but not sure)
+  So stuff that is highly symmetrical, high amplitude peaks, i.e, cubic, which has peaks at some radius, where all of the atoms sort of sit in the structure
+so to use a CNN on space groups and symmetry, training a filter to find relative heights of peaks to see the level of symmetry.
+
+Essentially, CNN is moving a function (matrix) across a field (larger matrix), and training the filter (first function), on what it is intereacting with that tells us something about our label
+Since we have supervised learning, function is being refined so that it is better at determining space group fromm PDF. 
+
+Convolution function: int(f(x)g(x'-x)dx'
+Training g to get better at recognizing what convolution function outputs(interaction between filter and field) correspond to the given output
+
+Can change number of layers (filters), size of the filters etc... lots of hyperparameters to tinker with to get better performance
+
+Convolution layer: apply filter
+Pooling layer: apply another filter but you downsample, similar to lasso, weighting and choosing important parts of initial field
+If your looking for insight, don't use a neural net, if your looking for performance, use a neural net
+pooling layer: feature selection ~~
+Neural nets are very sensitive to features not having too much variation.
+

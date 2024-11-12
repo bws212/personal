@@ -1,0 +1,46 @@
+PCA, dimensionality reductions etc.
+All Linear Algebra
+Looking for basis in the space, if find basis, all other vectors are linear combination of basis
+Simplifies features
+infinite number of basis
+Eigen basis is special basis that makes everything orthogonal
+starting matrix: s x f
+rows are samples, columns are features for each sample
+want high eigenvalue because you are taking the variance from some average value
+Like the highest eigenvalues are contributing more to the variances, since they are further away from the base s x f
+so we want the top n eigenvalues and eigenvectors that are contributing the most to the variance
+then that becomes our basis
+NMF: non-negative matrix factorization
+good for things like pdf, but they need to be offset st they are all +
+Manifolding: CVAE: convolutional variables auto encoder
+CVAE: one hot encoding
+high dimensional input, put through encoder that maps into low dimensional space, then you have decoder that maps back into high dim
+looks like a bow tie, initial on left, passed through encoder to low dim in middle, passed through decoder to get high dim on right
+stuff on high d on right side, high d on left side without the noise
+low dimensional space throws away all the noise channels
+So encoding then decoding helps to clean noise out of high Dim input but gives back high d output, just without the noise
+Auto-encoders ~~ to PCA
+lots of auto-encoding is used for generative AI
+
+Battery presentation:
+What is MS problem and why is it hard
+what is the ML approach proposed and how might it address the problem
+What is the data available or how will it be generated?
+
+CNN's:
+some image, or matrix with values in each entry
+then, some kernel that you apply to the filter
+Then some output matrix that is basically the same size as the original matrix
+Placer kernel (filter) on top of original matrix
+identity kernel, 1 at center and 0's everywhere else
+since we're convoluting... 
+since kernel over matrix, if perfect overlap, center value of new matrix becomes sum of all squares multiplied by eachother, so for identity, get 1 in middle + 
+the sum of zero * everything else, so just get 1 * value in center of original matrix, so identity, and since we're sliding, this happens at all entries, 
+get same matrix out as in
+
+edge kernel - gives back image with just the edges
+sharpening kernel- identity kernel + edge kernel: flat region --> original image, edge --> get original image + sharper,
+center value is >1 ?
+blurring kernel: higher in middle, then decreases with distance away from middle going up
+normally a gaussian is used for a blurring kernel, at middle, peak of gaussian, as you get further away, move down gaussian curve
+

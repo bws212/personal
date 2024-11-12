@@ -1,0 +1,27 @@
+PCA
+Form a basis, lin ind. set
+The basis is essentially eigenvectors.. Amount is some eigenvalue*eigenvector
+Like if you have three chemical components, and they are combining etc, 
+3 components are eigenvectors, amount over tiem is eigenvalues, scaling these three components along their eigenvector etc.
+ALl signals from diffraction can be written as lin. comb. of the three compositions, with an eigenvalue for each of the 3 eigenvectors
+So we can use PCA to find the eigenvectors, and keep the ones with the highest eigenvalues to form a basis for our dataset
+
+
+Gas Perm:
+Either high flow rate low selectivity, or very high selectivity and very low flow rate,,, selectivity vs. permeability
+But we want very high selectivity and flow rate, so we need new materials:
+Use mL to find a material with these properties
+Luory Distribution
+New materials, either doesn't exist or we haven't tried it, focus on "we haven't tried it"
+One-hot Encoding
+SMILES: Way of representing molecules as vectors: 1-D code of characters which codes for molecule, conversion between code and molecules
+Store in database^^
+"SMILES string": all sitting in some database in this format
+issue is that length of SMILE strings depends on chemical composition and structure, so it gets weird
+So we need to fingerprint --> take something and turn it into fixed value numeric
+In this case: Hashing
+A hash is a function that will take variable length things and map them onto fixed length data objects
+variables length things go into hash functions and come out as fixed length HASH, ideally come out as unique hash so we can unhash, etc
+RDkit: hash function that takes SMILE string and returns a Boolean hash
+Merkle tree and hashes are used for crypto currency
+Get comfortable with SMILE strings/ material informatics... hashes etc...

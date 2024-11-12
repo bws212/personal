@@ -1,0 +1,8 @@
+CLustering and PCA are both low cost, unsupervised methods to group data
+Types of clustering: k-means, agglorimization?, db-scan
+db-scan is density based, best when looking for patterns, but not necessarily everything else
+
+Pre-process w PCA or clustering unsupervised methods
+Give both raw data and data based on principal components to see differences in performances
+Can do this with NMF, clustering, PCA, etc(other unsupervised pre-processing methods) to see if one works better
+

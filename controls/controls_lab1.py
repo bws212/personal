@@ -66,6 +66,7 @@ def data_retrieve(names):
         data_objects.append(df)
     return data_objects
 
+
 def exp_plot(data):
     plt.figure(figsize=(10, 6))
     data['Elapsed Time (s)'] = data['Elapsed Time'].apply(convert_time_to_seconds)
